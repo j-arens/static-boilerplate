@@ -1,24 +1,23 @@
 /*
 ********** Helpers
 */
-
 // screen reader text
-
 .srt {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px /*force*/;
-  margin: -1px /*force*/;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px /*force*/;
+    border: 0;
+    clip: rect(0 0 0 0);
+    /*force*/
+    height: 1px;
+    /*force*/
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    /*force*/
+    width: 1px;
 }
-
 // pseudo elements placeholder
-
 %pseudos {
-  display: block;
-  content: '';
-  position: absolute;
+    display: block;
+    content: '';
+    position: absolute;
 }

@@ -28,19 +28,21 @@ gulp.task('index', function() {
 });
 
 gulp.task('views', function() {
-  return gulp.src('./src/views/*.html')
+    return gulp.src('./src/views/*.html')
         .pipe(gulp.dest('./dist/views'));
 });
 
 // css tasks
 gulp.task('styles', function() {
-  var postProcessors = [
-    precss(),
-    lost(),
-    pxToRem({propWhiteList: []}),
-    svgFrag()
-  ];
-  return gulp.src('./src/styles/**/*.scss')
+    var postProcessors = [
+        precss(),
+        lost(),
+        pxToRem({
+            propWhiteList: []
+        }),
+        svgFrag()
+    ];
+    return gulp.src('./src/styles/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss(postProcessors))
@@ -55,9 +57,13 @@ gulp.task('styles', function() {
 // js tasks
 gulp.task('js', function() {
     return gulp.src('./src/js/*.js')
-        .pipe(order(['src/js/anime.js','src/js/app.js'], {base: './'}))
+        .pipe(order(['src/js/anime.js', 'src/js/app.js'], {
+            base: './'
+        }))
         .pipe(concat('app.min.js'))
-        .pipe(uglify({mangle: false}))
+        .pipe(uglify({
+            mangle: false
+        }))
         .pipe(gulp.dest('./dist/js'))
 });
 

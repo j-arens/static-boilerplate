@@ -1,35 +1,13 @@
 /* Base colors */
-
 $white: #fff;
 $black: #0b0b0b;
 $gray: #333333;
 $tall-poppy-red: #C73226;
 $pickled-bluewood-blue: #263248;
-
 /* Color maps */
-
-$ui-colors: (
-  success: $pickled-bluewood-blue,
-  error: $tall-poppy-red
-);
-
-$shades: (
-  gray: (
-    ex-light: lighten($gray, 25%),
-    light: lighten($gray, 1%),
-    base: $gray,
-    dark: darken($gray, 8%),
-    ex-dark: darken($gray, 16%)
-  ),
-  black: (
-    light: lighten($black, 10%),
-    base: $black,
-    dark: darken($black, 10%)
-  )
-);
-
+$ui-colors: ( success: $pickled-bluewood-blue, error: $tall-poppy-red );
+$shades: ( gray: ( ex-light: lighten($gray, 25%), light: lighten($gray, 1%), base: $gray, dark: darken($gray, 8%), ex-dark: darken($gray, 16%) ), black: ( light: lighten($black, 10%), base: $black, dark: darken($black, 10%) ) );
 /* Color theme */
-
 $color-primary: $pickled-bluewood-blue;
 $color-accent: $tall-poppy-red;
 $color-shadow: #eee;

@@ -14,6 +14,7 @@ var cssnano = require('gulp-cssnano');
 var pxToRem = require('postcss-pxtorem');
 var sass = require('gulp-sass');
 var svgFrag = require('postcss-svg-fragments');
+var mqFilter = require('postcss-filter-mq');
 
 // js
 var uglify = require('gulp-uglify');
@@ -48,7 +49,7 @@ gulp.task('styles', function() {
         .pipe(postcss(postProcessors))
         .pipe(concat('main.min.css'))
         .pipe(autoprefixer())
-        .pipe(cssnano())
+        // .pipe(cssnano())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist/css'))
         .pipe(browsersync.stream());

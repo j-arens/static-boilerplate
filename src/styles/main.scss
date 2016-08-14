@@ -1,6 +1,22 @@
 @import 'vendor/_index.scss';
 @import 'config/_index.scss';
-@import 'sass/_index.scss';
-@import 'layout/_index.scss';
 @import 'components/_index.scss';
 @import 'pages/_index.scss';
+
+@lost gutter 1em;
+@lost flexbox no-flex;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-smoothing: anti-aliased;
+}
+
+* {
+  box-sizing: border-box;
+}
